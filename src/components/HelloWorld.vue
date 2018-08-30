@@ -32,6 +32,15 @@ export default {
     }
   },
   components: { At },
+  created () {
+    this.$axios.get('/bg/MiniAppC/GetAppInfo')
+      .then(res => {
+        console.log(res)
+      })
+      .catch(errMsg => {
+        console.log(errMsg)
+      })
+  },
   methods: {
     clickWho () {
       console.log('22222222222')

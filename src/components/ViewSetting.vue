@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="view-setting">
     {{msg}}
     {{getName}}
-    <ul>
+    <ul class="view-item">
       <li v-for="(item,index) in activeName" :key="index">
         {{item.name}}
       </li>
@@ -32,3 +32,12 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+  .view-setting {
+    width: 300px;
+    color: red;
+    .view-item {
+      list-style: none;
+    }
+  }
+</style>
